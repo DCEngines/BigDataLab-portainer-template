@@ -29,7 +29,7 @@
         "description": "BigDataLabs Apache Package",
         "categories": ["BigDataLab", "BigDataLab Apache Package"],
         "platform": "ubuntu_16.04",
-        "image": "mysql/mysql-server:5.7",
+        "image": "bigdatalabs/mysql-server:5.7",
 		"logo":"https://i.imgur.com/BUYoGN0.png",
 		"env":[
 			{
@@ -38,7 +38,7 @@
 				"description":"This variable specifies a password that is set for the MySQL root account."
 			}
 		],
-		"ports":["3306/tcp", "33060/tcp"]
+		"ports":["3306/tcp", "33060/tcp", "22/tcp"]
     },
     {
         "type": "container",
