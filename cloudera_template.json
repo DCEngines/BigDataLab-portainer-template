@@ -1,0 +1,14 @@
+[
+    {
+        "type": "container",
+        "title": "Cloudera 5.14 Secondary Node",		
+        "description": "BigDataLabs Cloudera",
+        "categories": ["BigDataLab", "BigDataLab Cloudera"],
+        "platform": "ubuntu_14.04",
+        "image": "bigdatalabs/cloudera_secondary_node:5.14.0",
+        "logo":"https://i.imgur.com/GwJ8nUU.png",
+		"ports": [
+            "9091/tcp","9092/tcp","2181/tcp","22/tcp"
+        ]
+    }
+]
