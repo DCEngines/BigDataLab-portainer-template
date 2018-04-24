@@ -1,7 +1,7 @@
 [
     {
         "type": "container",
-        "title": "Cloudera 5.14 Secondary Node",		
+        "title": "Add More Cloudera 5.14 Service Container",		
         "description": "BigDataLabs Cloudera",
         "categories": ["BigDataLab", "BigDataLab Cloudera"],
         "platform": "ubuntu_14.04",
