@@ -6,7 +6,10 @@
         "categories": ["BigDataLab", "BigDataLab Cloudera"],
         "platform": "ubuntu_14.04",
         "image": "bigdatalabs/cloudera_secondary_node:5.14.0",
-        "logo":"https://upload.wikimedia.org/wikipedia/commons/5/5a/Cloudera_logo.svg"
+        "logo":"https://upload.wikimedia.org/wikipedia/commons/5/5a/Cloudera_logo.svg",
+        "ports": [
+            "22/tcp", "2122/tcp", "7180/tcp", "7183/tcp", "8020/tcp", "8030/tcp", "8031/tcp", "8032/tcp", "8033/tcp", "8040/tcp", "8042/tcp", "8889/tcp", "9000/tcp", "10020/tcp", "18081/tcp", "50010/tcp", "50020/tcp", "50075/tcp", "50090/tcp", "8088/tcp", "8888/tcp", "10002/tcp", "11000/tcp", "18080/tcp", "19888/tcp", "50070/tcp", "60010/tcp"
+        ]
     },
    {
         "type": "container",
