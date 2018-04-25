@@ -126,9 +126,7 @@
 		"ports": [
             "22/tcp"
         ]
-    },
-
-	
+    },	
     {
         "type": "container",
         "title": "Single node Hadoop 2.7",		
@@ -277,52 +275,20 @@
     ],
     "volumes": ["/usr/share/elasticsearch/data"]
   },
-  {
+{
     "type": "container",
-    "title": "Minio",
-    "description": "A distributed object storage server built for cloud applications and devops",
-    "categories": ["storage"],
+    "title": "Magento 2",
+    "description": "Open-source e-commerce platform",
+    "categories": ["CMS"],
     "platform": "linux",
-    "logo": "https://portainer.io/images/logos/minio.png",
-    "image": "minio/minio:latest",
+    "logo": "https://portainer.io/images/logos/magento.png",
+    "image": "alankent/gsd:latest",
     "ports": [
-      "9000/tcp"
+      "80/tcp",
+      "3000/tcp",
+      "3001/tcp"
     ],
-    "env": [
-      {
-        "name": "MINIO_ACCESS_KEY",
-        "label": "Minio access key"
-      },
-      {
-        "name": "MINIO_SECRET_KEY",
-        "label": "Minio secret key"
-      }
-    ],
-    "volumes": ["/export", "/root/.minio"],
-    "command": "server /export"
-  },
-  {
-    "type": "container",
-    "title": "Scality S3",
-    "description": "Standalone AWS S3 protocol server",
-    "categories": ["storage"],
-    "platform": "linux",
-    "logo": "https://portainer.io/images/logos/scality-s3.png",
-    "image": "scality/s3server",
-    "ports": [
-      "8000/tcp"
-    ],
-    "env": [
-      {
-        "name": "SCALITY_ACCESS_KEY",
-        "label": "Scality S3 access key"
-      },
-      {
-        "name": "SCALITY_SECRET_KEY",
-        "label": "Scality S3 secret key"
-      }
-    ],
-    "volumes": ["/usr/src/app/localData", "/usr/src/app/localMetadata"]
+    "volumes": ["/var/www/html/"]
   },
   {
     "type": "container",
@@ -386,19 +352,6 @@
       "5672/tcp"
     ],
     "volumes": ["/var/lib/rabbitmq"]
-  },
-  {
-    "type": "container",
-    "title": "Drupal",
-    "description": "Open-source content management framework",
-    "categories": ["CMS"],
-    "platform": "linux",
-    "logo": "https://portainer.io/images/logos/drupal.png",
-    "image": "drupal:latest",
-    "ports": [
-      "80/tcp"
-    ],
-    "volumes": ["/var/www/html"]
   },
   {
     "type": "container",
