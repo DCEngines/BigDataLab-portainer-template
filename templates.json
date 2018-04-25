@@ -178,6 +178,250 @@
 		"ports": [
             "22/tcp"
         ]
-    }
-	
+    },
+  {
+    "type": "container",
+    "title": "MariaDB",
+    "description": "Performance beyond MySQL",
+    "categories": ["database"],
+    "platform": "linux",
+    "logo": "https://portainer.io/images/logos/mariadb.png",
+    "image": "mariadb:latest",
+    "env": [
+      {
+        "name": "MYSQL_ROOT_PASSWORD",
+        "label": "Root password"
+      }
+    ],
+    "ports": [
+      "3306/tcp"
+    ],
+    "volumes": ["/var/lib/mysql"]
+  },
+  {
+    "type": "container",
+    "title": "PostgreSQL",
+    "description": "The most advanced open-source database",
+    "categories": ["database"],
+    "platform": "linux",
+    "logo": "https://portainer.io/images/logos/postgres.png",
+    "image": "postgres:latest",
+    "env": [
+      {
+        "name": "POSTGRES_USER",
+        "label": "Superuser"
+      },
+      {
+        "name": "POSTGRES_PASSWORD",
+        "label": "Superuser password"
+      }
+    ],
+    "ports": [
+      "5432/tcp"
+    ],
+    "volumes": ["/var/lib/postgresql/data"]
+  },
+  {
+    "type": "container",
+    "title": "Mongo",
+    "description": "Open-source document-oriented database",
+    "categories": ["database"],
+    "platform": "linux",
+    "logo": "https://portainer.io/images/logos/mongo.png",
+    "image": "mongo:latest",
+    "ports": [
+      "27017/tcp"
+    ],
+    "volumes": ["/data/db"]
+  },
+  {
+    "type": "container",
+    "title": "CockroachDB",
+    "description": "An open-source, survivable, strongly consistent, scale-out SQL database",
+    "categories": ["database"],
+    "platform": "linux",
+    "logo": "https://portainer.io/images/logos/cockroachdb.png",
+    "image": "cockroachdb/cockroach:latest",
+    "ports": [
+      "26257/tcp",
+      "8080/tcp"
+    ],
+    "volumes": ["/cockroach/cockroach-data"],
+    "command": "start --insecure"
+  },
+  {
+    "type": "container",
+    "title": "CrateDB",
+    "description": "An open-source distributed SQL database",
+    "categories": ["database"],
+    "platform": "linux",
+    "logo": "https://portainer.io/images/logos/cratedb.png",
+    "image": "crate:latest",
+    "ports": [
+      "4200/tcp",
+      "4300/tcp"
+    ],
+    "volumes": ["/data"]
+  },
+  {
+    "type": "container",
+    "title": "Elasticsearch",
+    "description": "Open-source search and analytics engine",
+    "categories": ["database"],
+    "platform": "linux",
+    "logo": "https://portainer.io/images/logos/elasticsearch.png",
+    "image": "elasticsearch:latest",
+    "ports": [
+      "9200/tcp",
+      "9300/tcp"
+    ],
+    "volumes": ["/usr/share/elasticsearch/data"]
+  },
+  {
+    "type": "container",
+    "title": "Minio",
+    "description": "A distributed object storage server built for cloud applications and devops",
+    "categories": ["storage"],
+    "platform": "linux",
+    "logo": "https://portainer.io/images/logos/minio.png",
+    "image": "minio/minio:latest",
+    "ports": [
+      "9000/tcp"
+    ],
+    "env": [
+      {
+        "name": "MINIO_ACCESS_KEY",
+        "label": "Minio access key"
+      },
+      {
+        "name": "MINIO_SECRET_KEY",
+        "label": "Minio secret key"
+      }
+    ],
+    "volumes": ["/export", "/root/.minio"],
+    "command": "server /export"
+  },
+  {
+    "type": "container",
+    "title": "Scality S3",
+    "description": "Standalone AWS S3 protocol server",
+    "categories": ["storage"],
+    "platform": "linux",
+    "logo": "https://portainer.io/images/logos/scality-s3.png",
+    "image": "scality/s3server",
+    "ports": [
+      "8000/tcp"
+    ],
+    "env": [
+      {
+        "name": "SCALITY_ACCESS_KEY",
+        "label": "Scality S3 access key"
+      },
+      {
+        "name": "SCALITY_SECRET_KEY",
+        "label": "Scality S3 secret key"
+      }
+    ],
+    "volumes": ["/usr/src/app/localData", "/usr/src/app/localMetadata"]
+  },
+  {
+    "type": "container",
+    "title": "SQL Server",
+    "description": "Microsoft SQL Server on Linux",
+    "categories": ["database"],
+    "platform": "linux",
+    "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
+    "logo": "https://portainer.io/images/logos/microsoft.png",
+    "image": "microsoft/mssql-server-linux:2017-GA",
+    "ports": [
+      "1433/tcp"
+    ],
+    "env": [
+      {
+        "name": "ACCEPT_EULA",
+        "set": "Y"
+      },
+      {
+        "name": "SA_PASSWORD",
+        "label": "SA password"
+      }
+    ]
+  },
+  {
+    "type": "container",
+    "title": "Solr",
+    "description": "Open-source enterprise search platform",
+    "categories": ["search-engine"],
+    "platform": "linux",
+    "logo": "https://portainer.io/images/logos/solr.png",
+    "image": "solr:latest",
+    "ports": [
+      "8983/tcp"
+    ],
+    "volumes": ["/opt/solr/mydata"]
+  },
+  {
+    "type": "container",
+    "title": "Redis",
+    "description": "Open-source in-memory data structure store",
+    "categories": ["database"],
+    "platform": "linux",
+    "logo": "https://portainer.io/images/logos/redis.png",
+    "image": "redis:latest",
+    "ports": [
+      "6379/tcp"
+    ],
+    "volumes": ["/data"]
+  },
+  {
+    "type": "container",
+    "title": "RabbitMQ",
+    "description": "Highly reliable enterprise messaging system",
+    "categories": ["messaging"],
+    "platform": "linux",
+    "logo": "https://portainer.io/images/logos/rabbitmq.png",
+    "image": "rabbitmq:latest",
+    "ports": [
+      "5671/tcp",
+      "5672/tcp"
+    ],
+    "volumes": ["/var/lib/rabbitmq"]
+  },
+  {
+    "type": "container",
+    "title": "Drupal",
+    "description": "Open-source content management framework",
+    "categories": ["CMS"],
+    "platform": "linux",
+    "logo": "https://portainer.io/images/logos/drupal.png",
+    "image": "drupal:latest",
+    "ports": [
+      "80/tcp"
+    ],
+    "volumes": ["/var/www/html"]
+  },
+  {
+    "type": "container",
+    "title": "Mautic",
+    "description": "Open-source marketing automation platform",
+    "categories": ["marketing"],
+    "platform": "linux",
+    "logo": "https://portainer.io/images/logos/mautic.png",
+    "image": "mautic/mautic:latest",
+    "env": [
+      {
+        "name": "MAUTIC_DB_HOST",
+        "label": "MySQL database host",
+        "type": "container"
+      },
+      {
+        "name": "MAUTIC_DB_PASSWORD",
+        "label": "Database password"
+      }
+    ],
+    "ports": [
+      "80/tcp"
+    ],
+    "volumes": ["/var/www/html"]
+  }	
 ]
