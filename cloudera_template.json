@@ -1,7 +1,7 @@
 [
     {
         "type": "container",
-        "title": "Add Cloudera 5.14 Host",		
+        "title": "Cloudera 5.14 Host",		
         "description": "BigDataLabs Cloudera",
         "categories": ["BigDataLab", "BigDataLab Cloudera"],
         "platform": "ubuntu_14.04",
