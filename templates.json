@@ -133,7 +133,7 @@
         "description": "BigDataLabs Apache Package",
         "categories": ["BigDataLab", "BigDataLab Apache Package"],
         "platform": "ubuntu_16.04",
-        "image": "bigdatalabs/hadoop:2.7.5",
+        "image": "bigdatalabs/hadoop:2.7.6_basic",
 		"logo":"https://i.imgur.com/iHElqQl.png",
         "ports": [
             "50010/tcp","50020/tcp","50070/tcp","50075/tcp","50090/tcp","9000/tcp","10020/tcp","19888/tcp","8030/tcp","8031/tcp","8032/tcp","8033/tcp","8040/tcp","8042/tcp","8088/tcp","22/tcp","2122/tcp"
