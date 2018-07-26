@@ -46,7 +46,7 @@
         "description": "BigDataLabs Apache Package",
         "categories": ["BigDataLab", "BigDataLab Apache Package"],
         "platform": "ubuntu_16.04",
-        "image": "bigdatalabs/zeppelin:addon_v0.7.3",
+        "image": "bigdatalabs/zeppelin:0.7.3",
 		"logo":"https://i.imgur.com/ZyAGexS.png",
         "ports": [
             "8080/tcp","22/tcp"
