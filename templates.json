@@ -125,6 +125,13 @@
         "logo":"https://i.imgur.com/9WC9ia5.png",
 		"ports": [
             "22/tcp"
+        ],
+		"env": [
+            {
+		"name":"HDFS_HOSTNAME",
+		"label":"IP address of Hadoop Namenode",
+		"description":"IP address of Hadoop Namenode"
+            }
         ]
     },	
     {
