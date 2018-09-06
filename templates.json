@@ -102,18 +102,7 @@
             }
         ]
     },
-    {
-        "type": "container",
-        "title": "Streamsets 2.6.0",		
-        "description": "BigDataLabs Apache Package",
-        "categories": ["BigDataLab", "BigDataLab Apache Package"],
-        "platform": "ubuntu_16.04",
-        "image": "bigdatalabs/streamsets:2.6.0",
-		"logo":"https://i.imgur.com/eB0ZHu7.png",
-        "ports": [
-            "18630/tcp","22/tcp"
-        ]
-    },
+
 	
 	{
         "type": "container",
@@ -239,35 +228,8 @@
     ],
     "volumes": ["/data/db"]
   },
-  {
-    "type": "container",
-    "title": "CockroachDB",
-    "description": "An open-source, survivable, strongly consistent, scale-out SQL database",
-    "categories": ["database"],
-    "platform": "linux",
-    "logo": "https://portainer.io/images/logos/cockroachdb.png",
-    "image": "cockroachdb/cockroach:latest",
-    "ports": [
-      "26257/tcp",
-      "8080/tcp"
-    ],
-    "volumes": ["/cockroach/cockroach-data"],
-    "command": "start --insecure"
-  },
-  {
-    "type": "container",
-    "title": "CrateDB",
-    "description": "An open-source distributed SQL database",
-    "categories": ["database"],
-    "platform": "linux",
-    "logo": "https://portainer.io/images/logos/cratedb.png",
-    "image": "crate:latest",
-    "ports": [
-      "4200/tcp",
-      "4300/tcp"
-    ],
-    "volumes": ["/data"]
-  },
+
+
   {
     "type": "container",
     "title": "Elasticsearch",
@@ -282,57 +244,8 @@
     ],
     "volumes": ["/usr/share/elasticsearch/data"]
   },
-{
-    "type": "container",
-    "title": "Magento 2",
-    "description": "Open-source e-commerce platform",
-    "categories": ["CMS"],
-    "platform": "linux",
-    "logo": "https://portainer.io/images/logos/magento.png",
-    "image": "alankent/gsd:latest",
-    "ports": [
-      "80/tcp",
-      "3000/tcp",
-      "3001/tcp"
-    ],
-    "volumes": ["/var/www/html/"]
-  },
-  {
-    "type": "container",
-    "title": "SQL Server",
-    "description": "Microsoft SQL Server on Linux",
-    "categories": ["database"],
-    "platform": "linux",
-    "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
-    "logo": "https://portainer.io/images/logos/microsoft.png",
-    "image": "microsoft/mssql-server-linux:2017-GA",
-    "ports": [
-      "1433/tcp"
-    ],
-    "env": [
-      {
-        "name": "ACCEPT_EULA",
-        "set": "Y"
-      },
-      {
-        "name": "SA_PASSWORD",
-        "label": "SA password"
-      }
-    ]
-  },
-  {
-    "type": "container",
-    "title": "Solr",
-    "description": "Open-source enterprise search platform",
-    "categories": ["search-engine"],
-    "platform": "linux",
-    "logo": "https://portainer.io/images/logos/solr.png",
-    "image": "solr:latest",
-    "ports": [
-      "8983/tcp"
-    ],
-    "volumes": ["/opt/solr/mydata"]
-  },
+
+
   {
     "type": "container",
     "title": "Redis",
@@ -345,43 +258,5 @@
       "6379/tcp"
     ],
     "volumes": ["/data"]
-  },
-  {
-    "type": "container",
-    "title": "RabbitMQ",
-    "description": "Highly reliable enterprise messaging system",
-    "categories": ["messaging"],
-    "platform": "linux",
-    "logo": "https://portainer.io/images/logos/rabbitmq.png",
-    "image": "rabbitmq:latest",
-    "ports": [
-      "5671/tcp",
-      "5672/tcp"
-    ],
-    "volumes": ["/var/lib/rabbitmq"]
-  },
-  {
-    "type": "container",
-    "title": "Mautic",
-    "description": "Open-source marketing automation platform",
-    "categories": ["marketing"],
-    "platform": "linux",
-    "logo": "https://portainer.io/images/logos/mautic.png",
-    "image": "mautic/mautic:latest",
-    "env": [
-      {
-        "name": "MAUTIC_DB_HOST",
-        "label": "MySQL database host",
-        "type": "container"
-      },
-      {
-        "name": "MAUTIC_DB_PASSWORD",
-        "label": "Database password"
-      }
-    ],
-    "ports": [
-      "80/tcp"
-    ],
-    "volumes": ["/var/www/html"]
-  }	
+  }
 ]
